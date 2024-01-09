@@ -42,35 +42,47 @@
         </div>
       </section>
       <section>
-        <div>
-          <img src="src/images/centerImage.png" alt="center image" />
+        <div class="container">
+          <img class="img-center" src="src/images/centerImage.png" alt="center image" />
+          <div>
+            <h2 id="about">Sobre :</h2>
+          <p class="text">
+            Somos uma empresa familiar! Alugamos brinquedos para comemorações!
+            Qualidade e diversão com o melhor preço!
+          </p>
+          <p class="text">
+            Deixe a diversão começar! Alugue nossos brinquedos e proporcione
+            momentos inesquecíveis para os pequenos convidados.
+          </p>
         </div>
-        <h2 id="about">Sobre :</h2>
-        <p>
-          Somos uma empresa familiar! Alugamos brinquedos para comemorações!
-          Qualidade e diversão com o melhor preço!
-        </p>
-        <p>
-          Deixe a diversão começar! Alugue nossos brinquedos e proporcione
-          momentos inesquecíveis para os pequenos convidados.
-        </p>
-      </section>
-      <div>
-        <div>Carrousel</div>
       </div>
+      </section>
       <section>
+        <div class="carrousel-slide">
+          <button id="return-btn"><img src="src/images/icons/divisa-esquerda-removebg-preview.png" alt="return"></button>
+          <div class="container-images">
+            <img class="slider on" src="src/images/carrousel/IMG-20211031-WA0013.jpg" alt="image1">
+            <img class="slider" src="src/images/carrousel/IMG-20211031-WA0012.jpg" alt="image2">
+            <img class="slider" src="src/images/carrousel/IMG-20211031-WA0007.jpg" alt="image3">
+          </div>
+          <button id="change-btn"><img src="src/images/icons/divisa-direita-removebg-preview.png" alt="change"></button>
+        </div>
+      </section>
+      <section class="grid">
         <h2 id="toys">Brinquedos :</h2>
-        <div class="container-img">
-          <img src="src/images/pulapequeno.png" alt="" />
-          <p>Pula Pula para crianças menores de 6 anos</p>
-        </div>
-        <div class="container-img">
-          <img src="src/images/pulagrande.png" alt="" />
-          <p>Pula Pula Adulto, adolescentes e Crianças</p>
-        </div>
-        <div class="container-img">
-          <img src="src/images/produtos_piscinabol.png" alt="" />
-          <p>Piscina de Bolinhas para os Pequeninos</p>
+        <div class="grid-container">
+          <div class="container-img">
+            <img src="src/images/pulapequeno.png" alt="" />
+            <p>Pula Pula para crianças menores de 6 anos</p>
+          </div>
+          <div class="container-img">
+            <img src="src/images/pulagrande.png" alt="" />
+            <p>Pula Pula Adulto, adolescentes e Crianças</p>
+          </div>
+          <div class="container-img">
+            <img src="src/images/produtos_piscinabol.png" alt="" />
+            <p>Piscina de Bolinhas para os Pequeninos</p>
+          </div>
         </div>
       </section>
     </main>
@@ -88,5 +100,6 @@
         <a href="" target="_blank">Telefone</a>
       </div>
     </footer>
+    <script type="module" src="src/js/index.js" defer></script>
   </body>
 </html>
