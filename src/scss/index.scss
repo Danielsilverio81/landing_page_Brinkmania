@@ -1,0 +1,65 @@
+@use './forward/lib';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lib.$body-bgColor;
+    min-height: 100vh;
+    width: 100%;
+    header {
+        .container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        } 
+        .hero {
+            width: 100%;
+            height: 400px;
+            background: lib.$primary;
+            .logo-img {
+                width: 100%;
+                max-width: 550px;
+                height: 360px;
+            }
+            .nav-content {
+                width: 100%;
+                .navigation {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    gap: 5px 10px;
+                    list-style: none;
+                    a {
+                        font-size: lib.$size-primary;
+                        color: lib.$nav-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        section {
+            h1 {
+                font-family: lib.$font-primary;
+                font-size: lib.$size-call;
+                margin-top: 10px;
+                margin-left: 144px;
+            }
+            .call-action {
+                font-family: lib.$font-primary;
+                width: 100%;
+                max-width: 900px;
+                margin-left: 144px;
+                margin-bottom: 134px;
+                font-size: lib.$size-callAction;
+            }
+        }
+    }
+}
