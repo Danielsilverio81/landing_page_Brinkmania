@@ -21,7 +21,7 @@ body {
 header .hero {
   width: 100%;
   height: 400px;
-  background: #87CEEB;
+  background: #FFE4C4;
 }
 header .hero .logo-img {
   width: 100%;
@@ -38,9 +38,12 @@ header .hero .nav-content .navigation {
   list-style: none;
 }
 header .hero .nav-content .navigation a {
+  font-family: "Pacifico", cursive;
+  text-shadow: 2px 1px 2px gray;
   font-size: 20px;
-  color: #FFE7BA;
+  color: #8B4513;
   text-decoration: none;
+  border: none;
 }
 
 main {
@@ -57,6 +60,7 @@ main .grid {
   height: 464px;
 }
 main section {
+  margin-top: 5px;
   width: 100%;
   max-width: 900px;
 }
@@ -91,6 +95,9 @@ main section .text {
   max-width: 650px;
   margin: 10px;
   font-size: 20px;
+}
+main section .text a {
+  text-decoration: none;
 }
 main section .carrousel-slide {
   margin: 25px 2px;
@@ -169,6 +176,7 @@ main section .grid-container .container-img p {
 }
 
 footer {
+  margin-top: 122px;
   width: 100%;
   height: 223px;
   background-color: #FFEC8B;
@@ -207,6 +215,7 @@ footer .btn-top {
   top: 550px;
   right: 135px;
   margin: 2px;
+  transition: 1.2s;
 }
 footer .btn-top #to-top-btn {
   padding: 2px;
