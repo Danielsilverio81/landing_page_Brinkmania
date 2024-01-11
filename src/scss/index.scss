@@ -10,170 +10,265 @@ body {
     background-color: lib.$body-bgColor;
     min-height: 100vh;
     width: 100%;
+}
 
-    .container {
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    .hero {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
+        height: 400px;
+        background: lib.$primary;
 
-    header {
-        .hero {
+        .logo-img {
             width: 100%;
-            height: 400px;
-            background: lib.$primary;
-
-            .logo-img {
-                width: 100%;
-                max-width: 550px;
-                height: 360px;
-            }
-
-            .nav-content {
-                width: 100%;
-
-                .navigation {
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-evenly;
-                    gap: 5px 10px;
-                    list-style: none;
-
-                    a {
-                        font-size: lib.$size-primary;
-                        color: lib.$nav-color;
-                        text-decoration: none;
-                    }
-                }
-            }
+            max-width: 520px;
+            height: 350px;
         }
-    }
 
-    main {
-        .grid {
+        .nav-content {
             width: 100%;
-            max-width: 1020px;
-            height: 464px;
-            margin: 0 auto;
-        }
-        section {
-            h1 {
-                font-family: lib.$font-primary;
-                font-size: lib.$size-call;
-                margin-top: 10px;
-                margin-left: 144px;
-            }
 
-            .call-action {
-                font-family: lib.$font-primary;
+            .navigation {
                 width: 100%;
-                max-width: 900px;
-                margin-left: 144px;
-                margin-bottom: 134px;
-                font-size: lib.$size-callAction;
-            }
-
-            .img-center {
-                margin: 10px;
-            }
-
-            #about, #toys {
-                font-size: lib.$size-callAction;
-                margin-top: 30px;
-                margin-bottom: 5px;
-            }
-
-            .text {
-                font-family: lib.$font-secondary;
-                font-weight: 300;
-                width: 100%;
-                max-width: 650px;
-                margin: 10px;
-                font-size: lib.$size-primary;
-            }
-
-            .carrousel-slide {
-                margin: 25px 2px;
                 display: flex;
-                width: 100%;
-                height: 555px;
+                justify-content: space-evenly;
+                list-style: none;
+
+                a {
+                    font-size: lib.$size-primary;
+                    color: lib.$nav-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1 0 auto;
+
+    .grid {
+        width: 100%;
+        max-width: 970px;
+        height: 464px;
+    }
+
+    section {
+        width: 100%;
+        max-width: 900px;
+
+        h1 {
+            font-family: lib.$font-primary;
+            font-size: lib.$size-call;
+            margin-top: 10px;
+            margin-right: 520px;
+        }
+
+        .call-action {
+            font-family: lib.$font-primary;
+            width: 100%;
+            max-width: 900px;
+            margin-right: 520px;
+            margin-bottom: 134px;
+            font-size: lib.$size-callAction;
+        }
+
+        .img-center {
+            margin: 5px;
+        }
+
+        #about,
+        #toys,
+        #contacts {
+            font-size: lib.$size-callAction;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+
+        .text {
+            font-family: lib.$font-secondary;
+            font-weight: 300;
+            width: 100%;
+            max-width: 650px;
+            margin: 10px;
+            font-size: lib.$size-primary;
+        }
+
+        .carrousel-slide {
+            margin: 25px 2px;
+            display: flex;
+            width: 100%;
+            height: 555px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .container-images {
+                position: relative;
+                display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 10px;
+                width: 100%;
+                max-width: 458px;
+                height: 552px;
 
-                .container-images {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                .slider {
+                    opacity: 0;
+                    transition: 0.5s;
+                    position: absolute;
                     width: 100%;
-                    max-width: 458px;
-                    height: 552px;
-
-                    .slider {
-                        opacity: 0;
-                        transition: 0.5s;
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: fill;
-                        border-radius: lib.$radius-primary;
-                    }
-
-                    .on {
-                        opacity: 1;
-                    }
+                    height: 100%;
+                    object-fit: fill;
+                    border-radius: lib.$radius-primary;
                 }
 
-                #change-btn,
-                #return-btn {
-                    width: 80px;
-                    height: 80px;
-                    border: none;
-                    background-color: transparent;
-                    cursor: pointer;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
+                .on {
+                    opacity: 1;
                 }
             }
 
-            #toys {margin-bottom: 30px;}
-            .grid-container {
-                margin: 2px auto;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 5px;
-                justify-content: center;
-                align-items: center;
+            #change-btn,
+            #return-btn {
+                width: 80px;
+                height: 80px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
 
-                .container-img {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        #toys {
+            margin-bottom: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            flex-wrap: wrap;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+
+            .container-img {
+                border-radius: lib.$radius-primary;
+                width: 100%;
+                max-width: 308px;
+                height: 310px;
+
+                img {
                     border-radius: lib.$radius-primary;
                     width: 100%;
-                    max-width: 308px;
-                    height: 310px;
-                    
-                    img {
-                        border-radius: lib.$radius-primary;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: fill;
-                    }
-                    p {
-                        margin: 5px auto;
-                        max-width: 275px;
-                        font-size: 19px;
-                        font-family: lib.$font-secondary;
-                        font-weight: bold;
-                        text-align: center;
-                    }
+                    height: 100%;
+                    object-fit: fill;
+                }
+
+                p {
+                    margin: 5px auto;
+                    max-width: 275px;
+                    font-size: 19px;
+                    font-family: lib.$font-secondary;
+                    font-weight: bold;
+                    text-align: center;
                 }
             }
+        }
 
+    }
+}
+
+footer {
+    width: 100%;
+    height: 223px;
+    background-color: lib.$secondary;
+
+    #contacts,
+    span {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .container-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .container-icon {
+            margin: 10px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 2px;
+
+            img {
+                width: 100%;
+                max-width: 43px;
+                height: 43px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+            }
         }
     }
+
+    .btn-top {
+        position: fixed;
+        top: 550px;
+        right: 135px;
+        margin: 2px;
+
+        #to-top-btn {
+            padding: 2px;
+            border-radius: 50%;
+            border: 1px solid darkgray;
+            width: 33px;
+            height: 33px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-button a {
+    display: block;
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
 }
