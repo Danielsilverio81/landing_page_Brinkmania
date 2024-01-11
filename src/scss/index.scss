@@ -26,10 +26,29 @@ header {
         height: 400px;
         background: lib.$primary;
 
+        @include lib.breakpoint(mobile) {
+            height: 250px;
+         }
+         
+         @include lib.breakpoint(tablet) {
+             height: 350px;
+         }
+
         .logo-img {
             width: 100%;
-            max-width: 520px;
-            height: 350px;
+            max-width: 540px;
+            height: 360px;
+            border: none;
+
+            @include lib.breakpoint(mobile) {
+                max-width: 240px;
+                height: 220px;
+             }
+             
+             @include lib.breakpoint(tablet) {
+                max-width: 350px;
+                height: 310px;
+             }
         }
 
         .nav-content {
@@ -48,6 +67,14 @@ header {
                     color: lib.$nav-color;
                     text-decoration: none;
                     border: none;
+
+                    @include lib.breakpoint(mobile) {
+                        font-size: 0.8rem;
+                    }
+
+                    @include lib.breakpoint(tablet) {
+                        font-size: 1.1rem;
+                    }
                 }
             }
         }
@@ -55,10 +82,8 @@ header {
 }
 
 main {
-    display: flex;
+    @include lib.d-flex(flex, center, center);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     flex: 1 0 auto;
 
@@ -78,6 +103,16 @@ main {
             font-size: lib.$size-call;
             margin-top: 10px;
             margin-right: 520px;
+
+            @include lib.breakpoint(mobile) {
+                margin-left: 15px;
+                font-size: 1rem;
+            }
+
+            @include lib.breakpoint(tablet) {
+                margin-left: 20px;
+                font-size: 1.4rem;
+            }
         }
 
         .call-action {
@@ -87,10 +122,36 @@ main {
             margin-right: 520px;
             margin-bottom: 134px;
             font-size: lib.$size-callAction;
+
+            @include lib.breakpoint(mobile) {
+                margin-right: 1px;
+                margin-bottom: 50px;
+                margin-left: 15px;
+                font-size: 0.8rem;
+                max-width: 265px;
+            }
+
+            @include lib.breakpoint(tablet) {
+                margin-right: 1px;
+                margin-bottom: 50px;
+                margin-left: 20px;
+                font-size: 1.2rem;
+                max-width: 430px;
+            }
         }
 
         .img-center {
             margin: 5px;
+
+            @include lib.breakpoint(mobile) {
+               max-width: 260px;
+               height: auto;
+            }
+            
+            @include lib.breakpoint(tablet) {
+                max-width: 460px;
+                height: auto;
+            }
         }
 
         #about,
@@ -99,6 +160,16 @@ main {
             font-size: lib.$size-callAction;
             margin-top: 30px;
             margin-bottom: 5px;
+
+            @include lib.breakpoint(mobile) {
+                margin-left: 10px;
+                font-size: 0.9rem;
+            }
+
+            @include lib.breakpoint(tablet) {
+                font-size: 1.3rem;
+                margin-left: 12px;
+            }
         }
 
         .text {
@@ -110,25 +181,47 @@ main {
             font-size: lib.$size-primary;
 
             a {text-decoration: none;}
+
+            @include lib.breakpoint(mobile) {
+                max-width: 350px;
+                font-size: 0.7rem;
+            }
+
+            @include lib.breakpoint(tablet) {
+                max-width: 350px;
+                font-size: 0.9rem;
+            }
         }
 
         .carrousel-slide {
-            margin: 25px 2px;
-            display: flex;
-            width: 100%;
+            margin: 25px 3px;
+            @include lib.d-flex(flex, center, center);
             height: 555px;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            gap: 5px;
+
+            @include lib.breakpoint(mobile) {
+               height: 300px;
+               margin: 10px 3px;
+               gap: 2px;
+
+            }
 
             .container-images {
                 position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include lib.d-flex(flex, center, center);
                 width: 100%;
                 max-width: 458px;
                 height: 552px;
+
+                @include lib.breakpoint(mobile) {
+                    max-width: 260px;
+                    height: 270px;
+                }
+
+                @include lib.breakpoint(tablet) {
+                    max-width: 358px;
+                    height: 450px;
+                }
 
                 .slider {
                     opacity: 0;
@@ -153,6 +246,16 @@ main {
                 background-color: transparent;
                 cursor: pointer;
 
+                @include lib.breakpoint(mobile) {
+                    max-width: 40px;
+                    height: auto;
+                }
+
+                @include lib.breakpoint(tablet) {
+                    max-width: 60px;
+                    height: auto;
+                }
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -168,16 +271,35 @@ main {
             display: grid;
             flex-wrap: wrap;
             grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: auto;
+            grid-auto-rows: max-content;
             gap: 5px;
             justify-content: center;
             align-items: center;
+
+            @include lib.breakpoint(mobile) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 52px 2px;
+            }
 
             .container-img {
                 border-radius: lib.$radius-primary;
                 width: 100%;
                 max-width: 308px;
                 height: 310px;
+
+                @include lib.breakpoint(mobile) {
+                    margin-left: 10px;
+                    width: 100%;
+                    max-width: 160px;
+                    height: 140px;
+                }
+
+                @include lib.breakpoint(tablet) {
+                    margin-left: 15px;
+                    width: 100%;
+                    max-width: 208px;
+                    height: 210px;
+                }
 
                 img {
                     border-radius: lib.$radius-primary;
@@ -193,6 +315,10 @@ main {
                     font-family: lib.$font-secondary;
                     font-weight: bold;
                     text-align: center;
+
+                    @include lib.breakpoint(mobile) {
+                        font-size: 0.7rem;
+                    }
                 }
             }
         }
@@ -206,10 +332,20 @@ footer {
     height: 223px;
     background-color: lib.$secondary;
 
+    @include lib.breakpoint(mobile) {
+        margin-top: 40px;
+        height: 120px;
+     }
+     
+     @include lib.breakpoint(tablet) {
+        margin-top: 80px;
+        height: 210px;
+     }
+
     #contacts,
     span {
         margin: 5px;
-        padding: 5px;
+        padding: 3px;
     }
 
     .container-footer {
@@ -217,12 +353,14 @@ footer {
         align-items: center;
         justify-content: space-evenly;
 
+        @include lib.breakpoint(mobile) {
+            font-size: 0.7rem;
+         }
+
         .container-icon {
-            margin: 10px;
+            margin: 5px;
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include lib.d-flex(flex, center, center);
             gap: 5px;
             padding: 2px;
 
@@ -230,6 +368,17 @@ footer {
                 width: 100%;
                 max-width: 43px;
                 height: 43px;
+
+                @include lib.breakpoint(mobile) {
+                    height: 20px;
+                    width: 20px;
+                 }
+                 
+                 @include lib.breakpoint(tablet) {
+                    height: 30px;
+                    width: 30px;
+                 }
+
             }
 
             a {
@@ -245,14 +394,31 @@ footer {
         top: 550px;
         right: 135px;
         margin: 2px;
-        transition: 1.2s;
+        z-index: 1001;
+        transition: 1s;
+        
+        @include lib.breakpoint(mobile) {
+            top: 497px;
+            right: 70px;
+        }
+        
+        @include lib.breakpoint(tablet) {
+            top: 540px;
+            right: 117px;
+        }
+
+        @include lib.breakpoint(desktop) {
+            top: 530px;
+            right: 150px;
+        }
 
         #to-top-btn {
+            cursor: pointer;
             padding: 2px;
             border-radius: 50%;
             border: 1px solid darkgray;
-            width: 33px;
-            height: 33px;
+            width: 30px;
+            height: 30px;
 
             img {
                 width: 100%;
@@ -266,6 +432,12 @@ footer {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    @include lib.d-flex(flex, center, center);
+
+    @include lib.breakpoint(mobile) {
+        top: 430px;
+        right: 20px;
+     }
 }
 
 .whatsapp-button a {
@@ -274,9 +446,18 @@ footer {
     padding: 10px;
     border-radius: 50%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+    @include lib.breakpoint(mobile) {
+       padding: 3px;
+    }
 }
 
 .whatsapp-button img {
     width: 40px;
     height: 40px;
+
+    @include lib.breakpoint(mobile) {
+        height: auto;
+        width: 25px;
+    }
 }

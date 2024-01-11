@@ -23,10 +23,33 @@ header .hero {
   height: 400px;
   background: #FFE4C4;
 }
+@media (max-width: 767px) {
+  header .hero {
+    height: 250px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .hero {
+    height: 350px;
+  }
+}
 header .hero .logo-img {
   width: 100%;
-  max-width: 520px;
-  height: 350px;
+  max-width: 540px;
+  height: 360px;
+  border: none;
+}
+@media (max-width: 767px) {
+  header .hero .logo-img {
+    max-width: 240px;
+    height: 220px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .hero .logo-img {
+    max-width: 350px;
+    height: 310px;
+  }
 }
 header .hero .nav-content {
   width: 100%;
@@ -45,12 +68,22 @@ header .hero .nav-content .navigation a {
   text-decoration: none;
   border: none;
 }
+@media (max-width: 767px) {
+  header .hero .nav-content .navigation a {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .hero .nav-content .navigation a {
+    font-size: 1.1rem;
+  }
+}
 
 main {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   flex: 1 0 auto;
 }
@@ -70,6 +103,18 @@ main section h1 {
   margin-top: 10px;
   margin-right: 520px;
 }
+@media (max-width: 767px) {
+  main section h1 {
+    margin-left: 15px;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main section h1 {
+    margin-left: 20px;
+    font-size: 1.4rem;
+  }
+}
 main section .call-action {
   font-family: "Pacifico", cursive;
   width: 100%;
@@ -78,8 +123,38 @@ main section .call-action {
   margin-bottom: 134px;
   font-size: 35px;
 }
+@media (max-width: 767px) {
+  main section .call-action {
+    margin-right: 1px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    font-size: 0.8rem;
+    max-width: 265px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main section .call-action {
+    margin-right: 1px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    max-width: 430px;
+  }
+}
 main section .img-center {
   margin: 5px;
+}
+@media (max-width: 767px) {
+  main section .img-center {
+    max-width: 260px;
+    height: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main section .img-center {
+    max-width: 460px;
+    height: auto;
+  }
 }
 main section #about,
 main section #toys,
@@ -87,6 +162,22 @@ main section #contacts {
   font-size: 35px;
   margin-top: 30px;
   margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  main section #about,
+  main section #toys,
+  main section #contacts {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main section #about,
+  main section #toys,
+  main section #contacts {
+    font-size: 1.3rem;
+    margin-left: 12px;
+  }
 }
 main section .text {
   font-family: "Roboto", sans-serif;
@@ -99,14 +190,32 @@ main section .text {
 main section .text a {
   text-decoration: none;
 }
+@media (max-width: 767px) {
+  main section .text {
+    max-width: 350px;
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main section .text {
+    max-width: 350px;
+    font-size: 0.9rem;
+  }
+}
 main section .carrousel-slide {
-  margin: 25px 2px;
+  margin: 25px 3px;
   display: flex;
-  width: 100%;
-  height: 555px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  height: 555px;
+  gap: 5px;
+}
+@media (max-width: 767px) {
+  main section .carrousel-slide {
+    height: 300px;
+    margin: 10px 3px;
+    gap: 2px;
+  }
 }
 main section .carrousel-slide .container-images {
   position: relative;
@@ -116,6 +225,18 @@ main section .carrousel-slide .container-images {
   width: 100%;
   max-width: 458px;
   height: 552px;
+}
+@media (max-width: 767px) {
+  main section .carrousel-slide .container-images {
+    max-width: 260px;
+    height: 270px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main section .carrousel-slide .container-images {
+    max-width: 358px;
+    height: 450px;
+  }
 }
 main section .carrousel-slide .container-images .slider {
   opacity: 0;
@@ -137,6 +258,20 @@ main section .carrousel-slide #return-btn {
   background-color: transparent;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  main section .carrousel-slide #change-btn,
+  main section .carrousel-slide #return-btn {
+    max-width: 40px;
+    height: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main section .carrousel-slide #change-btn,
+  main section .carrousel-slide #return-btn {
+    max-width: 60px;
+    height: auto;
+  }
+}
 main section .carrousel-slide #change-btn img,
 main section .carrousel-slide #return-btn img {
   width: 100%;
@@ -149,16 +284,38 @@ main section .grid-container {
   display: grid;
   flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
+  grid-auto-rows: max-content;
   gap: 5px;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 767px) {
+  main section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 52px 2px;
+  }
 }
 main section .grid-container .container-img {
   border-radius: 10px;
   width: 100%;
   max-width: 308px;
   height: 310px;
+}
+@media (max-width: 767px) {
+  main section .grid-container .container-img {
+    margin-left: 10px;
+    width: 100%;
+    max-width: 160px;
+    height: 140px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main section .grid-container .container-img {
+    margin-left: 15px;
+    width: 100%;
+    max-width: 208px;
+    height: 210px;
+  }
 }
 main section .grid-container .container-img img {
   border-radius: 10px;
@@ -174,6 +331,11 @@ main section .grid-container .container-img p {
   font-weight: bold;
   text-align: center;
 }
+@media (max-width: 767px) {
+  main section .grid-container .container-img p {
+    font-size: 0.7rem;
+  }
+}
 
 footer {
   margin-top: 122px;
@@ -181,18 +343,35 @@ footer {
   height: 223px;
   background-color: #FFEC8B;
 }
+@media (max-width: 767px) {
+  footer {
+    margin-top: 40px;
+    height: 120px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer {
+    margin-top: 80px;
+    height: 210px;
+  }
+}
 footer #contacts,
 footer span {
   margin: 5px;
-  padding: 5px;
+  padding: 3px;
 }
 footer .container-footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+@media (max-width: 767px) {
+  footer .container-footer {
+    font-size: 0.7rem;
+  }
+}
 footer .container-footer .container-icon {
-  margin: 10px;
+  margin: 5px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -205,6 +384,18 @@ footer .container-footer .container-icon img {
   max-width: 43px;
   height: 43px;
 }
+@media (max-width: 767px) {
+  footer .container-footer .container-icon img {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .container-footer .container-icon img {
+    height: 30px;
+    width: 30px;
+  }
+}
 footer .container-footer .container-icon a {
   text-decoration: none;
   color: black;
@@ -215,14 +406,34 @@ footer .btn-top {
   top: 550px;
   right: 135px;
   margin: 2px;
-  transition: 1.2s;
+  z-index: 1001;
+  transition: 1s;
+}
+@media (max-width: 767px) {
+  footer .btn-top {
+    top: 497px;
+    right: 70px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .btn-top {
+    top: 540px;
+    right: 117px;
+  }
+}
+@media (min-width: 993px) {
+  footer .btn-top {
+    top: 530px;
+    right: 150px;
+  }
 }
 footer .btn-top #to-top-btn {
+  cursor: pointer;
   padding: 2px;
   border-radius: 50%;
   border: 1px solid darkgray;
-  width: 33px;
-  height: 33px;
+  width: 30px;
+  height: 30px;
 }
 footer .btn-top #to-top-btn img {
   width: 100%;
@@ -233,6 +444,15 @@ footer .btn-top #to-top-btn img {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .whatsapp-button {
+    top: 430px;
+    right: 20px;
+  }
 }
 
 .whatsapp-button a {
@@ -242,10 +462,21 @@ footer .btn-top #to-top-btn img {
   border-radius: 50%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 767px) {
+  .whatsapp-button a {
+    padding: 3px;
+  }
+}
 
 .whatsapp-button img {
   width: 40px;
   height: 40px;
+}
+@media (max-width: 767px) {
+  .whatsapp-button img {
+    height: auto;
+    width: 25px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
