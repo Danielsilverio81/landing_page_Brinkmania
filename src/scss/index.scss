@@ -395,15 +395,15 @@ footer {
         right: 135px;
         margin: 2px;
         z-index: 1001;
-        transition: 1s;
+        transition: 0.6s;
         
         @include lib.breakpoint(mobile) {
-            top: 497px;
+            top: 550px;
             right: 70px;
         }
         
         @include lib.breakpoint(tablet) {
-            top: 540px;
+            top: 550px;
             right: 117px;
         }
 

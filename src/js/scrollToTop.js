@@ -3,9 +3,10 @@ let btnToShow = document.querySelector('.btn-top')
 
 const checkElementAppears = () => {
     let elementPosition = btn.getBoundingClientRect().top
-    let scrollPosition = window.scrollY || document.documentElement.scrollTop
+    let scrollPosition = document.documentElement.scrollTop
+    let halfPageHeight = window.innerHeight / 2;
 
-    if (elementPosition - scrollPosition <= 60) {
+    if (elementPosition - scrollPosition < -halfPageHeight) {
         btnToShow.style.opacity = "1"
     } else {
         btnToShow.style.opacity = "0"
