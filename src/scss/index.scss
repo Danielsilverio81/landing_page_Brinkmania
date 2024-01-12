@@ -105,6 +105,7 @@ main {
             margin-right: 520px;
 
             @include lib.breakpoint(mobile) {
+                margin-right: 5px;
                 margin-left: 15px;
                 font-size: 1rem;
             }
@@ -175,15 +176,14 @@ main {
         .text {
             font-family: lib.$font-secondary;
             font-weight: 300;
-            width: 100%;
             max-width: 650px;
-            margin: 10px;
+            margin: 5px;
             font-size: lib.$size-primary;
 
             a {text-decoration: none;}
 
             @include lib.breakpoint(mobile) {
-                max-width: 350px;
+                max-width: 330px;
                 font-size: 0.7rem;
             }
 
@@ -288,9 +288,9 @@ main {
                 height: 310px;
 
                 @include lib.breakpoint(mobile) {
-                    margin-left: 10px;
+                    margin-left: 5px;
                     width: 100%;
-                    max-width: 160px;
+                    max-width: 150px;
                     height: 140px;
                 }
 
@@ -391,6 +391,7 @@ footer {
 
     .btn-top {
         position: fixed;
+        opacity: 0;
         top: 550px;
         right: 135px;
         margin: 2px;
@@ -398,17 +399,16 @@ footer {
         transition: 0.6s;
         
         @include lib.breakpoint(mobile) {
-            top: 550px;
-            right: 70px;
+            display: none;
         }
         
         @include lib.breakpoint(tablet) {
-            top: 550px;
+            top: 555px;
             right: 117px;
         }
 
         @include lib.breakpoint(desktop) {
-            top: 530px;
+            top: 535px;
             right: 150px;
         }
 
@@ -425,6 +425,15 @@ footer {
             }
         }
     }
+
+    .copy {
+        @include lib.d-flex(flex, center, center);
+        width: fit-content;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 5px auto;
+        font-size: 0.7rem;
+    }
 }
 
 .whatsapp-button {
@@ -435,7 +444,7 @@ footer {
     @include lib.d-flex(flex, center, center);
 
     @include lib.breakpoint(mobile) {
-        top: 430px;
+        top: 445px;
         right: 20px;
      }
 }
