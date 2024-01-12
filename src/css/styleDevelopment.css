@@ -105,6 +105,7 @@ main section h1 {
 }
 @media (max-width: 767px) {
   main section h1 {
+    margin-right: 5px;
     margin-left: 15px;
     font-size: 1rem;
   }
@@ -182,9 +183,8 @@ main section #contacts {
 main section .text {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  width: 100%;
   max-width: 650px;
-  margin: 10px;
+  margin: 5px;
   font-size: 20px;
 }
 main section .text a {
@@ -192,7 +192,7 @@ main section .text a {
 }
 @media (max-width: 767px) {
   main section .text {
-    max-width: 350px;
+    max-width: 330px;
     font-size: 0.7rem;
   }
 }
@@ -303,9 +303,9 @@ main section .grid-container .container-img {
 }
 @media (max-width: 767px) {
   main section .grid-container .container-img {
-    margin-left: 10px;
+    margin-left: 5px;
     width: 100%;
-    max-width: 160px;
+    max-width: 150px;
     height: 140px;
   }
 }
@@ -403,6 +403,7 @@ footer .container-footer .container-icon a {
 }
 footer .btn-top {
   position: fixed;
+  opacity: 0;
   top: 550px;
   right: 135px;
   margin: 2px;
@@ -411,19 +412,18 @@ footer .btn-top {
 }
 @media (max-width: 767px) {
   footer .btn-top {
-    top: 550px;
-    right: 70px;
+    display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   footer .btn-top {
-    top: 550px;
+    top: 555px;
     right: 117px;
   }
 }
 @media (min-width: 993px) {
   footer .btn-top {
-    top: 530px;
+    top: 535px;
     right: 150px;
   }
 }
@@ -438,6 +438,16 @@ footer .btn-top #to-top-btn {
 footer .btn-top #to-top-btn img {
   width: 100%;
 }
+footer .copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5px auto;
+  font-size: 0.7rem;
+}
 
 .whatsapp-button {
   position: fixed;
@@ -450,7 +460,7 @@ footer .btn-top #to-top-btn img {
 }
 @media (max-width: 767px) {
   .whatsapp-button {
-    top: 430px;
+    top: 469px;
     right: 20px;
   }
 }

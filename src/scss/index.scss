@@ -444,7 +444,7 @@ footer {
     @include lib.d-flex(flex, center, center);
 
     @include lib.breakpoint(mobile) {
-        top: 445px;
+        top: 469px;
         right: 20px;
      }
 }
