@@ -8,14 +8,11 @@ Landing page of a family business in the toy rental business in the metropolitan
 - [landing\_page\_BrinkMania](#landing_page_brinkmania)
   - [Tabela de Conteúdo](#tabela-de-conteúdo)
   - [Overview](#overview)
-    - [responsiveness:](#responsiveness)
+    - [Responsiveness:](#responsiveness)
   - [Technologies](#technologies)
   - [Install](#install)
     - [To run this project locally, follow the steps below:](#to-run-this-project-locally-follow-the-steps-below)
-    - [ssh:](#ssh)
-    - [https:](#https)
   - [Local Configuration and Execution](#local-configuration-and-execution)
-      - [Any error returned check the path of your folders in the command are correct or if you actually have node, npm and sass installed](#any-error-returned-check-the-path-of-your-folders-in-the-command-are-correct-or-if-you-actually-have-node-npm-and-sass-installed)
   - [License](#license)
 ## Overview
 
@@ -27,7 +24,7 @@ important information about the company and the services provided, a button to g
 <img src="./src/images/gifs/BrinkManiaLandingP.gif" width="750px" height="400px">
 <br>
 
-### responsiveness:
+### Responsiveness:
 <img src="./src/images/gifs/BrinkManiaLandingP_Responsiveness.gif" width="900px" height="600px">
 <br>
 
@@ -42,12 +39,17 @@ important information about the company and the services provided, a button to g
 ### To run this project locally, follow the steps below:
 
 - clone the repository:
-### ssh:
+<br>
+ssh:
+<br>
+
 ```bash
 git clone git@github.com:Danielsilverio81/landing_page_Brinkmania.git
 ```
 
-### https:
+https:
+<br>
+
 ```bash
 git clone https://github.com/Danielsilverio81/landing_page_Brinkmania.git
 ```
@@ -142,7 +144,8 @@ after running this command, run the command to leave an example file not connect
 ```bash
    sass --watch src/scss/index.scss:src/css/styleDevelopment.css
 ```
-#### Any error returned check the path of your folders in the command are correct or if you actually have node, npm and sass installed
+<br>
+Any error returned check the path of your folders in the command are correct or if you actually have node, npm and sass installed
 
 5. **Make Your Contributions:**
 
