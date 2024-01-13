@@ -354,7 +354,7 @@ footer {
         justify-content: space-evenly;
 
         @include lib.breakpoint(mobile) {
-            font-size: 0.7rem;
+            font-size: 0.6rem;
          }
 
         .container-icon {
@@ -392,7 +392,7 @@ footer {
     .btn-top {
         position: fixed;
         opacity: 0;
-        top: 550px;
+        bottom: 20px;
         right: 135px;
         margin: 2px;
         z-index: 1001;
@@ -400,16 +400,6 @@ footer {
         
         @include lib.breakpoint(mobile) {
             display: none;
-        }
-        
-        @include lib.breakpoint(tablet) {
-            top: 555px;
-            right: 117px;
-        }
-
-        @include lib.breakpoint(desktop) {
-            top: 535px;
-            right: 150px;
         }
 
         #to-top-btn {
@@ -419,6 +409,7 @@ footer {
             border: 1px solid darkgray;
             width: 30px;
             height: 30px;
+            background: lib.$primary;
 
             img {
                 width: 100%;
@@ -432,7 +423,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         margin: 5px auto;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 }
 
@@ -442,10 +433,10 @@ footer {
     right: 20px;
     z-index: 1000;
     @include lib.d-flex(flex, center, center);
-
+    
     @include lib.breakpoint(mobile) {
-        top: 469px;
-        right: 20px;
+        bottom: 60px;
+        right: 5px;
      }
 }
 
@@ -467,6 +458,6 @@ footer {
 
     @include lib.breakpoint(mobile) {
         height: auto;
-        width: 25px;
+        width: 20px;
     }
 }
